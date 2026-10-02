@@ -1,0 +1,9 @@
+{
+  "name": "ABBIS slice",
+  "short_name": "ABBIS",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f6f3",
+  "theme_color": "#b3122d",
+  "icons": []
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABBIS Slice</title>
+  <meta name="description" content="Blood unit traceability, inventory and explainable forecasting. Synthetic data only.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="drop" aria-hidden="true"></span>
+      <div>
+        <strong>ABBIS slice</strong>
+        <small id="nodeLabel">connecting…</small>
+      </div>
+    </div>
+    <div class="top-controls">
+      <span id="net" class="pill">online</span>
+      <span id="outbox" class="pill hidden"></span>
+      <select id="lang" aria-label="Language">
+        <option value="en">English</option>
+        <option value="sw">Kiswahili</option>
+      </select>
+      <select id="user" aria-label="Signed-in demo user"></select>
+    </div>
+  </header>
+
+  <div id="banner" class="banner hidden"></div>
+  <div class="synthetic">Synthetic data only. No real donors, patients or facilities.</div>
+
+  <nav class="tabs" role="tablist">
+    <button data-tab="inventory" data-i18n="inventory" class="active">Inventory</button>
+    <button data-tab="advisor" data-i18n="advisor">Advisor</button>
+    <button data-tab="appeals">Donor appeals</button>
+    <button data-tab="forecast" data-i18n="forecast">Forecast</button>
+    <button data-tab="trace" data-i18n="trace">Trace a unit</button>
+    <button data-tab="record">Record event</button>
+    <button data-tab="sync" data-i18n="sync">Sync &amp; conflicts</button>
+  </nav>
+
+  <main>
+    <section id="tab-inventory" class="tab active">
+      <div class="row between">
+        <h2>Stock by site and blood group</h2>
+        <div class="seg" id="compSeg"></div>
+      </div>
+      <p class="muted">Each cell: units available · <span data-i18n="daysOfCover">days of cover</span> at forecast demand. Click a cell to see its forecast.</p>
+      <div class="table-wrap"><table id="invTable" class="grid"></table></div>
+      <div class="legend">
+        <span class="chip st-ok">ok</span><span class="chip st-expiry_risk">expiry risk</span><span class="chip st-low">below reorder point</span><span class="chip st-critical">runs out before resupply</span>
+      </div>
+    </section>
+
+    <section id="tab-advisor" class="tab">
+      <div class="row between">
+        <h2>Suggested transfers</h2>
+        <small class="muted" id="advAsOf"></small>
+      </div>
+      <p class="muted">AI proposes, people decide. Nothing moves until an inventory officer at the sending site approves. Rejections need a reason so the model can be reviewed.</p>
+      <div id="monitor" class="monitor"></div>
+      <div id="suggestions" class="cards"></div>
+      <h3>Alerts no transfer can fix</h3>
+      <ul id="alerts" class="alerts"></ul>
+    </section>
+
+    <section id="tab-appeals" class="tab">
+      <div class="row between">
+        <h2>Donor appeals</h2>
+        <a href="donor.html" target="_blank" rel="noopener" class="muted">Open the donor app ↗</a>
+      </div>
+      <p class="muted">Appeals appear in the donor app for people whose blood type matches (or, for urgent appeals, is compatible), sorted by distance. Shortfalls the transfer advisor cannot close are drafted below for you to publish.</p>
+      <h3>Drafted from forecast shortfalls</h3>
+      <div id="drafts" class="cards"></div>
+      <h3>New appeal</h3>
+      <form id="appealForm" class="form">
+        <label>Site <select name="siteId" id="apSite"></select></label>
+        <label>Blood groups (comma separated) <input name="bloodGroups" value="O-" required></label>
+        <label>Units needed <input name="unitsNeeded" type="number" min="1" max="500" value="5" required></label>
+        <label>Urgency <select name="urgency"><option>routine</option><option>urgent</option><option>emergency</option></select></label>
+        <label>Message to donors <input name="note" maxlength="280" placeholder="e.g. Walk-ins welcome 8am–5pm"></label>
+        <button type="submit">Publish appeal</button>
+      </form>
+      <h3>Published</h3>
+      <div id="appealList" class="cards"></div>
+      <h3>Donors expected at your site</h3>
+      <div id="pledgeList" class="cards"></div>
+    </section>
+
+    <section id="tab-forecast" class="tab">
+      <div class="row wrap">
+        <label>Site <select id="fSite"></select></label>
+        <label>Group <select id="fGroup"></select></label>
+        <label>Component <select id="fComp"></select></label>
+      </div>
+      <div id="fChart" class="chart"></div>
+      <div id="fInfo" class="info-grid"></div>
+    </section>
+
+    <section id="tab-trace" class="tab">
+      <form id="traceForm" class="row wrap">
+        <input id="traceDin" placeholder="Donation ID, e.g. X999926000123-RBC" autocomplete="off" required>
+        <button type="submit">Trace</button>
+        <button type="button" id="traceRandom" class="ghost">Pick a transfused unit</button>
+      </form>
+      <div id="traceOut"></div>
+    </section>
+
+    <section id="tab-record" class="tab">
+      <h2>Record a lifecycle event</h2>
+      <p class="muted">Works offline: the event gets an ID on this device and is sent when the connection returns. Re-sending is safe.</p>
+      <form id="recForm" class="form">
+        <label>Event <select id="recType"></select></label>
+        <label>Site <select id="recSite"></select></label>
+        <label>Donation ID <input id="recDin" required autocomplete="off"></label>
+        <div id="recExtra"></div>
+        <button type="submit">Record</button>
+      </form>
+      <pre id="recOut" class="out"></pre>
+    </section>
+
+    <section id="tab-sync" class="tab">
+      <div class="row between">
+        <h2>Node sync</h2>
+        <button id="syncNow" class="ghost">Sync now</button>
+      </div>
+      <pre id="syncOut" class="out"></pre>
+      <h2>Open conflicts</h2>
+      <p class="muted">Raised when two sites recorded incompatible actions while offline (for example, the same unit issued twice). The first event in causal order stands; the other is held for a person to resolve.</p>
+      <div id="conflicts" class="cards"></div>
+    </section>
+  </main>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Give Blood</title>
+  <meta name="description" content="See who needs your blood type near you, and book a donation.">
+  <meta name="theme-color" content="#b3122d">
+  <link rel="manifest" href="donor.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="donor.css">
+</head>
+<body class="donor">
+  <header class="d-top">
+    <div class="brand"><span class="drop" aria-hidden="true"></span><strong>Give Blood</strong></div>
+    <span id="dGroup" class="group-badge hidden"></span>
+  </header>
+  <div class="synthetic">Prototype with synthetic data. Not a real blood service.</div>
+  <div id="dBanner" class="banner hidden"></div>
+
+  <!-- Sign up / sign in -->
+  <section id="v-welcome" class="view">
+    <h1>Your blood can save a life near you</h1>
+    <p class="muted">Hospitals and blood banks post what they need. We show you the requests your blood type can answer and the nearest place to donate.</p>
+    <form id="regForm" class="form">
+      <label>Your name <input name="name" required autocomplete="given-name" maxlength="60"></label>
+      <label>Blood type
+        <select name="bloodGroup" required>
+          <option value="">Choose…</option>
+          <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+          <option>B+</option><option>B-</option><option>AB+</option><option>AB-</option>
+          <option value="unknown">I don't know (we'll test it when you donate)</option>
+        </select>
+      </label>
+      <label>Last time you gave blood (optional) <input name="lastDonationAt" type="date"></label>
+      <label class="check"><input type="checkbox" name="smsConsent" checked> Send me an SMS when someone near me needs my type</label>
+      <button type="button" id="locBtn" class="ghost">Use my location</button>
+      <small id="locStatus" class="muted">Location is used only to measure distance, rounded to about 1 km.</small>
+      <button type="submit">Show me who needs blood</button>
+    </form>
+    <div id="demoBox" class="demo hidden">
+      <h3>Or try a demo donor</h3>
+      <div id="demoList" class="chips"></div>
+    </div>
+  </section>
+
+  <!-- Requests -->
+  <section id="v-requests" class="view hidden">
+    <div id="eligCard" class="card"></div>
+    <div id="upcoming"></div>
+    <h2>Needed now</h2>
+    <p class="muted" id="reqHint"></p>
+    <div id="reqList" class="list"></div>
+  </section>
+
+  <!-- One request -->
+  <section id="v-appeal" class="view hidden">
+    <button class="ghost back" data-go="requests">← Back</button>
+    <div id="apHead"></div>
+    <div id="apMap" class="map"></div>
+    <h3>Where to donate</h3>
+    <div id="apSites" class="list"></div>
+    <h3>When</h3>
+    <div class="row wrap">
+      <select id="apDay" aria-label="Day"></select>
+      <select id="apTime" aria-label="Time"></select>
+    </div>
+    <button id="apPledge" class="big">I'll donate</button>
+    <p class="muted small">Before you donate, staff check your health and haemoglobin. If you can't donate that day, nothing is lost: you'll be told when you can come back.</p>
+  </section>
+
+  <!-- Map of all donation sites -->
+  <section id="v-near" class="view hidden">
+    <h2>Donate near me</h2>
+    <p class="muted">You don't need a request to donate. Any of these sites will welcome you.</p>
+    <div id="nearMap" class="map tall"></div>
+    <div id="nearList" class="list"></div>
+  </section>
+
+  <!-- Me -->
+  <section id="v-me" class="view hidden">
+    <h2 id="meName"></h2>
+    <div id="meCard" class="card"></div>
+    <h3>My donations</h3>
+    <div id="history" class="list"></div>
+    <button id="signOut" class="ghost">Sign out</button>
+  </section>
+
+  <nav class="d-nav hidden" id="dNav">
+    <button data-go="requests" class="active">Requests</button>
+    <button data-go="near">Near me</button>
+    <button data-go="me">Me</button>
+  </nav>
+
+  <script src="donor.js" type="module"></script>
+</body>
+</html>

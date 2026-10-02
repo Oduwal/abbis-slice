@@ -1,0 +1,24 @@
+{
+  "en": {
+    "inventory": "Inventory",
+    "advisor": "Advisor",
+    "forecast": "Forecast",
+    "trace": "Trace a unit",
+    "sync": "Sync & conflicts",
+    "approve": "Approve",
+    "reject": "Reject",
+    "offline": "Offline: actions are queued and will sync when the connection returns",
+    "daysOfCover": "days of cover"
+  },
+  "sw": {
+    "inventory": "Hifadhi",
+    "advisor": "Mshauri",
+    "forecast": "Utabiri",
+    "trace": "Fuatilia kipimo",
+    "sync": "Usawazishaji na migongano",
+    "approve": "Idhinisha",
+    "reject": "Kataa",
+    "offline": "Nje ya mtandao: vitendo vimehifadhiwa na vitatumwa mtandao ukirudi",
+    "daysOfCover": "siku za akiba"
+  }
+}

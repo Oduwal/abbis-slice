@@ -1,0 +1,17 @@
+{
+  "name": "abbis-slice",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline-first blood unit traceability, inventory and explainable shortage/expiry forecasting. Synthetic data only.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "scripts": {
+    "seed": "node --experimental-strip-types --no-warnings src/synthetic/seed.ts",
+    "start": "node --experimental-strip-types --no-warnings src/server.ts",
+    "start:hospital": "NODE_ID=hosp-alpha SITE_SCOPE=HOSP-ALPHA PORT=4001 DB_PATH=data/hosp-alpha.db PEER_URL=http://localhost:4000 node --experimental-strip-types --no-warnings src/server.ts",
+    "test": "node --experimental-strip-types --no-warnings --test test/*.test.ts",
+    "eval": "node --experimental-strip-types --no-warnings src/ai/evaluate.ts"
+  }
+}

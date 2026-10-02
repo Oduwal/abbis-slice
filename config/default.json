@@ -1,0 +1,31 @@
+{
+  "deployment": "Synthetic demo network (not a real blood service)",
+  "locale": "en",
+  "timezone": "Africa/Nairobi",
+  "components": {
+    "RBC": { "label": "Red cells", "shelfLifeDays": 35, "storage": "2-6 C", "fhirCategory": "cells" },
+    "PLT": { "label": "Platelets", "shelfLifeDays": 5, "storage": "20-24 C, agitated", "fhirCategory": "cells" },
+    "FFP": { "label": "Fresh frozen plasma", "shelfLifeDays": 365, "storage": "<= -25 C", "fhirCategory": "fluid" }
+  },
+  "bloodGroupShare": {
+    "O+": 0.45, "A+": 0.25, "B+": 0.2, "AB+": 0.045,
+    "O-": 0.025, "A-": 0.015, "B-": 0.012, "AB-": 0.003
+  },
+  "ttiPanel": ["HIV", "HBV", "HCV", "Syphilis"],
+  "inventoryPolicy": {
+    "safetyStockDays": 2,
+    "transportLeadDays": 1,
+    "forecastHorizonDays": 7,
+    "minShelfLifeOnArrivalDays": 0.5,
+    "expiryWatchDays": 14
+  },
+  "donor": {
+    "minDaysBetweenDonations": 84,
+    "appealReachKm": 50
+  },
+  "forecast": {
+    "minHistoryDays": 28,
+    "holdoutDays": 14,
+    "intervalZ": 1.2816
+  }
+}
