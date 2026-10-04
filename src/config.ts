@@ -1,5 +1,6 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import type { BloodGroup, Component } from './domain/types.ts';
 
 /**
@@ -26,7 +27,7 @@ export interface Config {
   forecast: { minHistoryDays: number; holdoutDays: number; intervalZ: number };
 }
 
-export const ROOT = new URL('..', import.meta.url).pathname;
+export const ROOT = fileURLToPath(new URL('..', import.meta.url));
 
 function deepMerge<T>(base: T, over: Partial<T>): T {
   const out: Record<string, unknown> = { ...(base as Record<string, unknown>) };
