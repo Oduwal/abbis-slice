@@ -14,6 +14,10 @@
 <canvas id="c" width="1080" height="1920"></canvas>
 <script>
 "use strict";
+// ---- beats.json (tools/beats.mjs): the supplied track's tempo, beats, downbeats and hits
+const BEATS = {"source":"track.wav","start":0,"duration":45,"bpm":119.9,"offset":0.499,"period":0.5004,"beats":[0.499,1,1.5,2,2.501,3.001,3.502,4.002,4.503,5.003,5.503,6.004,6.504,7.005,7.505,8.005,8.506,9.006,9.507,10.007,10.508,11.008,11.508,12.009,12.509,13.01,13.51,14.01,14.511,15.011,15.512,16.012,16.513,17.013,17.513,18.014,18.514,19.015,19.515,20.015,20.516,21.016,21.517,22.017,22.518,23.018,23.518,24.019,24.519,25.02,25.52,26.02,26.521,27.021,27.522,28.022,28.523,29.023,29.523,30.024,30.524,31.025,31.525,32.026,32.526,33.026,33.527,34.027,34.528,35.028,35.528,36.029,36.529,37.03,37.53,38.031,38.531,39.031,39.532,40.032,40.533,41.033,41.533,42.034,42.534,43.035,43.535,44.036,44.536],"downbeats":[2,4.002,6.004,8.005,10.007,12.009,14.01,16.012,18.014,20.015,22.017,24.019,26.02,28.022,30.024,32.026,34.027,36.029,38.031,40.032,42.034,44.036],"hits":[1.277,2.763,3.646,4.505,5.271,7.268,8.522,9.66,10.519,11.656,12.516,13.653,15.65,16.254,16.765,17.647,18.762,19.644,20.759,21.269,22.013,22.5,23.266,24.009,24.497,25.263,26.006,26.517,27.26,28.003,29.652,30.511,31.649,32.508,33.646,34.505,35.643,36.502,37.268,38.011,38.754,39.265,40.008,40.519,41.262,42.005,42.516,43.654,44.513],"loudest":{"t":37.7,"db":-8.4},"quiet":[[28.2,29.4]]};
+// ---- voice.json (tools/voice.mjs): the voice-over's lines and word times
+const VOICE = {"duration":44.995,"lead":1,"tail":3.16,"lines":[{"id":"open","text":"Two months ago, I was spending over three hours every single night manually typing WhatsApp receipts and tracking orders for my shop.","t0":1,"t1":8.47,"words":[{"w":"Two","t0":1,"t1":1.226,"est":true},{"w":"months","t0":1.226,"t1":1.623,"est":true},{"w":"ago,","t0":1.623,"t1":1.849,"est":true},{"w":"I","t0":1.849,"t1":1.962,"est":true},{"w":"was","t0":1.962,"t1":2.188,"est":true},{"w":"spending","t0":2.188,"t1":2.698,"est":true},{"w":"over","t0":2.698,"t1":2.981,"est":true},{"w":"three","t0":2.981,"t1":3.32,"est":true},{"w":"hours","t0":3.32,"t1":3.66,"est":true},{"w":"every","t0":3.66,"t1":3.999,"est":true},{"w":"single","t0":3.999,"t1":4.395,"est":true},{"w":"night","t0":4.395,"t1":4.735,"est":true},{"w":"manually","t0":4.735,"t1":5.244,"est":true},{"w":"typing","t0":5.244,"t1":5.64,"est":true},{"w":"WhatsApp","t0":5.64,"t1":6.15,"est":true},{"w":"receipts","t0":6.15,"t1":6.659,"est":true},{"w":"and","t0":6.659,"t1":6.885,"est":true},{"w":"tracking","t0":6.885,"t1":7.395,"est":true},{"w":"orders","t0":7.395,"t1":7.791,"est":true},{"w":"for","t0":7.791,"t1":8.017,"est":true},{"w":"my","t0":8.017,"t1":8.187,"est":true},{"w":"shop.","t0":8.187,"t1":8.47,"est":true}]},{"id":"tired","text":"I was constantly exhausted.","t0":8.97,"t1":10.241,"words":[{"w":"I","t0":8.97,"t1":9.064,"est":true},{"w":"was","t0":9.064,"t1":9.252,"est":true},{"w":"constantly","t0":9.252,"t1":9.77,"est":true},{"w":"exhausted.","t0":9.77,"t1":10.241,"est":true}]},{"id":"enrol","text":"Then I enrolled in SkillBridge Academy.","t0":11.741,"t1":13.447,"words":[{"w":"Then","t0":11.741,"t1":11.96,"est":true},{"w":"I","t0":11.96,"t1":12.047,"est":true},{"w":"enrolled","t0":12.047,"t1":12.441,"est":true},{"w":"in","t0":12.441,"t1":12.572,"est":true},{"w":"SkillBridge","t0":12.572,"t1":13.097,"est":true},{"w":"Academy.","t0":13.097,"t1":13.447,"est":true}]},{"id":"learn","text":"I didn't just learn basic ChatGPT prompts. I learned how to connect OpenAI to WhatsApp and Google Sheets, using n eight n.","t0":14.247,"t1":21.796,"words":[{"w":"I","t0":14.247,"t1":14.374,"est":true},{"w":"didn't","t0":14.374,"t1":14.754,"est":true},{"w":"just","t0":14.754,"t1":15.072,"est":true},{"w":"learn","t0":15.072,"t1":15.452,"est":true},{"w":"basic","t0":15.452,"t1":15.833,"est":true},{"w":"ChatGPT","t0":15.833,"t1":16.34,"est":true},{"w":"prompts.","t0":16.34,"t1":16.848,"est":true},{"w":"I","t0":16.848,"t1":16.975,"est":true},{"w":"learned","t0":16.975,"t1":17.482,"est":true},{"w":"how","t0":17.482,"t1":17.736,"est":true},{"w":"to","t0":17.736,"t1":17.926,"est":true},{"w":"connect","t0":17.926,"t1":18.434,"est":true},{"w":"OpenAI","t0":18.434,"t1":18.878,"est":true},{"w":"to","t0":18.878,"t1":19.068,"est":true},{"w":"WhatsApp","t0":19.068,"t1":19.639,"est":true},{"w":"and","t0":19.639,"t1":19.893,"est":true},{"w":"Google","t0":19.893,"t1":20.337,"est":true},{"w":"Sheets,","t0":20.337,"t1":20.781,"est":true},{"w":"using","t0":20.781,"t1":21.162,"est":true},{"w":"n","t0":21.162,"t1":21.289,"est":true},{"w":"eight","t0":21.289,"t1":21.669,"est":true},{"w":"n.","t0":21.669,"t1":21.796,"est":true}]},{"id":"order","text":"Now, when a customer orders at two A M, the system logs the order and sends a Paystack link automatically.","t0":22.496,"t1":28.188,"words":[{"w":"Now,","t0":22.496,"t1":22.715,"est":true},{"w":"when","t0":22.715,"t1":22.989,"est":true},{"w":"a","t0":22.989,"t1":23.098,"est":true},{"w":"customer","t0":23.098,"t1":23.591,"est":true},{"w":"orders","t0":23.591,"t1":23.974,"est":true},{"w":"at","t0":23.974,"t1":24.138,"est":true},{"w":"two","t0":24.138,"t1":24.357,"est":true},{"w":"A","t0":24.357,"t1":24.466,"est":true},{"w":"M,","t0":24.466,"t1":24.576,"est":true},{"w":"the","t0":24.576,"t1":24.795,"est":true},{"w":"system","t0":24.795,"t1":25.178,"est":true},{"w":"logs","t0":25.178,"t1":25.451,"est":true},{"w":"the","t0":25.451,"t1":25.67,"est":true},{"w":"order","t0":25.67,"t1":25.999,"est":true},{"w":"and","t0":25.999,"t1":26.218,"est":true},{"w":"sends","t0":26.218,"t1":26.546,"est":true},{"w":"a","t0":26.546,"t1":26.656,"est":true},{"w":"Paystack","t0":26.656,"t1":27.148,"est":true},{"w":"link","t0":27.148,"t1":27.422,"est":true},{"w":"automatically.","t0":27.422,"t1":28.188,"est":true}]},{"id":"saved","text":"I saved three hours daily, grew my monthly sales, and even started setting up automations for other vendors in my market, for eighty thousand naira per setup.","t0":29.888,"t1":37.976,"words":[{"w":"I","t0":29.888,"t1":29.992,"est":true},{"w":"saved","t0":29.992,"t1":30.305,"est":true},{"w":"three","t0":30.305,"t1":30.619,"est":true},{"w":"hours","t0":30.619,"t1":30.932,"est":true},{"w":"daily,","t0":30.932,"t1":31.245,"est":true},{"w":"grew","t0":31.245,"t1":31.506,"est":true},{"w":"my","t0":31.506,"t1":31.662,"est":true},{"w":"monthly","t0":31.662,"t1":32.08,"est":true},{"w":"sales,","t0":32.08,"t1":32.393,"est":true},{"w":"and","t0":32.393,"t1":32.601,"est":true},{"w":"even","t0":32.601,"t1":32.862,"est":true},{"w":"started","t0":32.862,"t1":33.28,"est":true},{"w":"setting","t0":33.28,"t1":33.697,"est":true},{"w":"up","t0":33.697,"t1":33.854,"est":true},{"w":"automations","t0":33.854,"t1":34.48,"est":true},{"w":"for","t0":34.48,"t1":34.689,"est":true},{"w":"other","t0":34.689,"t1":35.002,"est":true},{"w":"vendors","t0":35.002,"t1":35.419,"est":true},{"w":"in","t0":35.419,"t1":35.576,"est":true},{"w":"my","t0":35.576,"t1":35.732,"est":true},{"w":"market,","t0":35.732,"t1":36.097,"est":true},{"w":"for","t0":36.097,"t1":36.306,"est":true},{"w":"eighty","t0":36.306,"t1":36.671,"est":true},{"w":"thousand","t0":36.671,"t1":37.141,"est":true},{"w":"naira","t0":37.141,"t1":37.454,"est":true},{"w":"per","t0":37.454,"t1":37.663,"est":true},{"w":"setup.","t0":37.663,"t1":37.976,"est":true}]},{"id":"close","text":"SkillBridge didn't just teach me tech. It transformed my business.","t0":38.776,"t1":41.835,"words":[{"w":"SkillBridge","t0":38.776,"t1":39.35,"est":true},{"w":"didn't","t0":39.35,"t1":39.636,"est":true},{"w":"just","t0":39.636,"t1":39.875,"est":true},{"w":"teach","t0":39.875,"t1":40.162,"est":true},{"w":"me","t0":40.162,"t1":40.306,"est":true},{"w":"tech.","t0":40.306,"t1":40.544,"est":true},{"w":"It","t0":40.544,"t1":40.688,"est":true},{"w":"transformed","t0":40.688,"t1":41.261,"est":true},{"w":"my","t0":41.261,"t1":41.405,"est":true},{"w":"business.","t0":41.405,"t1":41.835,"est":true}]}]};
 // =====================================================================
 //  SKILLBRIDGE / EMEKA — 9:16, 45s @ 120 BPM, 24fps. Hard cuts on the beat grid, no morphs (BRIDGES = []):
 //  held shots, then 8ths, then a rush of 16ths (3 frames each, some on odd frames), then a held payoff.
@@ -33,15 +37,15 @@ const CX = 470;
 
 // the shot list: [t0, scene, camera]
 const SHOT_LIST = [
-  [0.0,  'desk',    'wide'],
-  [4.0,  'desk2',   'close'],
-  [10.0, 'academy', 'wide'],
-  [12.5, 'flow',    'wide'],
-  [17.5, 'chat',    'wide'],
-  [22.5, 'pay',     'wide'],
-  [25.0, 'market',  'wide'],
-  [31.0, 'vendors', 'wide'],
-  [40.0, 'end',     'wide'],
+  [0.0,   'desk',    'wide'],
+  [8.75,  'desk2',   'close'],
+  [11.5,  'academy', 'wide'],
+  [17.5,  'flow',    'wide'],
+  [22.25, 'chat',    'wide'],
+  [26.5,  'pay',     'wide'],
+  [29.5,  'market',  'wide'],
+  [34.0,  'vendors', 'wide'],
+  [38.5,  'end',     'wide'],
 ];
 const SCENE = { desk: () => sceneDesk(false), desk2: () => sceneDesk(true), academy: () => sceneAcademy(), flow: () => sceneFlow(), chat: () => sceneChat(), pay: () => scenePay(), market: () => sceneMarket(), vendors: () => sceneVendors(), end: () => sceneEnd() };
 const ERA_LIST = SHOT_LIST.map(([t0, sc], i) => [t0, i + 1 < SHOT_LIST.length ? SHOT_LIST[i + 1][0] : DURATION, SCENE[sc]]);
@@ -53,24 +57,24 @@ const TIMELINE = {
   cuts: SHOT_LIST.slice(1).map(([t0]) => t0),
   fastFrom: 0, fastTo: 0,
   morphs: [],
-  cues: { buzz: 1.0, enroll: 10.5, wire1: 13.0, wire2: 14.5, wire3: 16.0, order: 18.0, row: 19.5, link: 23.0, sleep: 23.5, bars: 26.0, vend: 32.0, tick: 29.0 },
+  cues: { buzz: 1.5, enroll: 11.9, chat: 15.8, wire1: 18.9, wire2: 19.6, wire3: 20.8, order: 23.4, row: 25.2, link: 26.8, bars: 30.4, tick: 30.6, vend: 34.5, naira: 36.3, endtag: 38.8 },
   acts: [
-    { name: '1 The grind',     role: 'build',   t0: 0.0,  t1: 10.0 },
-    { name: '2 The wiring',    role: 'journey', t0: 10.0, t1: 22.5 },
-    { name: '3 Night, quiet',  role: 'silence', t0: 22.5, t1: 25.0 },
-    { name: '4 The payoff',    role: 'gift',    t0: 25.0, t1: 40.0 },
-    { name: '5 Goodbye',       role: 'goodbye', t0: 40.0, t1: 45.0 },
+    { name: '1 The grind',     role: 'build',   t0: 0.0,  t1: 11.5 },
+    { name: '2 The wiring',    role: 'journey', t0: 11.5, t1: 26.5 },
+    { name: '3 Night, quiet',  role: 'silence', t0: 26.5, t1: 29.5 },
+    { name: '4 The payoff',    role: 'gift',    t0: 29.5, t1: 38.5 },
+    { name: '5 Goodbye',       role: 'goodbye', t0: 38.5, t1: 45.0 },
   ],
   board: [
-    { t: 3.0,  title: 'receipts pile up', sound: 'low drone, tick', next: 'cut to his face' },
-    { t: 8.0,  title: 'exhausted at 2 AM', sound: 'clock tick, then nothing', next: 'cut: the academy' },
-    { t: 11.5, title: 'SkillBridge', sound: 'music lifts', next: 'the wiring' },
-    { t: 15.0, title: 'n8n connects it', sound: 'a blip per node', next: 'the 2 AM order' },
-    { t: 20.5, title: 'order logged', sound: 'blip per row', next: 'the link' },
-    { t: 24.0, title: 'he sleeps', sound: 'near silence', next: 'the payoff' },
-    { t: 28.0, title: '3 hours back', sound: 'the loudest hit', next: 'other vendors' },
-    { t: 36.0, title: 'N80,000 per setup', sound: 'rising arpeggio', next: 'goodbye' },
-    { t: 42.0, title: 'SkillBridge', sound: 'resolve', next: 'loop' },
+    { t: 4.0,  title: 'receipts pile up', sound: 'low drone, tick', next: 'cut to his face' },
+    { t: 10.0, title: 'exhausted at 2 AM', sound: 'clock tick, then nothing', next: 'cut: the academy' },
+    { t: 13.0, title: 'SkillBridge', sound: 'music lifts', next: 'the wiring' },
+    { t: 20.0, title: 'n8n connects it', sound: 'a blip per node', next: 'the 2 AM order' },
+    { t: 25.0, title: 'order logged', sound: 'blip per row', next: 'the link' },
+    { t: 28.5, title: 'he sleeps', sound: 'near silence', next: 'the payoff' },
+    { t: 31.5, title: '3 hours back', sound: 'the loudest hit', next: 'other vendors' },
+    { t: 36.5, title: 'N80,000 per setup', sound: 'rising arpeggio', next: 'goodbye' },
+    { t: 41.0, title: 'SkillBridge', sound: 'resolve', next: 'loop' },
   ],
   narration: [],
 };
@@ -873,16 +877,18 @@ function sceneAcademy() {
   cut(rect(-30, 1280, W + 60, 700, 0), PAL.green, { key: 'grA', tear: 0, sy: -4 });
   const s = popS(TIMELINE.cues.enroll);
   person(380, 1040, 1.15, { ...EM, mood: 'happy', key: 'emA' });
-  ctx.save(); ctx.translate(690, 880); ctx.rotate(-0.05); ctx.scale(Math.max(0.01, s), Math.max(0.01, s));
+  ctx.save(); ctx.translate(690, 880 + Math.sin(TT * 1.6) * 8); ctx.rotate(-0.05 + Math.sin(TT * 1.1) * 0.025); ctx.scale(Math.max(0.01, s), Math.max(0.01, s));
   cut(rect(-190, -230, 380, 460, 14), PAL.paper, { key: 'card', sb: 14, sy: 9, pat: pat.lines('rgba(42,29,24,0.18)', 40, 80) });
   cut(rect(-190, -230, 380, 90, 10), PAL.teal, { key: 'cardH', shadow: false });
   handText('SkillBridge', -150, -158, 54, '#fff', { key: 'sb1', weight: 700 });
   handText('Academy', -150, -40, 58, PAL.ink, { key: 'sb2', weight: 700 });
-  handText('ENROLLED', -150, 70, 38, PAL.greenD, { key: 'sb3', weight: 700 });
-  ink(arcPts(0, 160, 38, Math.PI * 1.05, Math.PI * 1.95, 12), { w: 8, color: PAL.greenD, key: 'chk' });
+  handText('ENROLLED', -150, 70, 38, PAL.greenD, { key: 'sb3', weight: 700, frac: ev(12.9, 0.7) });
+  if (ev(13.9, 0.6) > 0) ink(arcPts(0, 160, 38, Math.PI * 1.05, Math.PI * 1.05 + Math.PI * 0.9 * ev(13.9, 0.6), 12), { w: 8, color: PAL.greenD, key: 'chk' });
   ctx.restore();
   for (let i = 0; i < 6; i++) sparkle(120 + i * 150, 560 + (i % 2) * 90 + Math.sin(TT * 2 + i) * 8, 10 + (i % 3) * 4, '#fff8dc');
+  for (let i = 0; i < 10; i++) { const R = RNG('cfA', i), k = ((TT - 11.5) * 0.18 + R.f()) % 1, cx = R.r(80, 1000) + Math.sin(TT * 2 + i) * 20, cy = 200 + k * 1100; cut(rot(rect(cx - 12, cy - 8, 24, 16, 2), cx, cy, TT * 3 + i), [PAL.pink, PAL.yellow, PAL.teal, PAL.purple][i % 4], { key: 'cfA' + i, shadow: false, tear: 0.3 }); }
   plant(160, 1380, 1, PAL.blue, 'plA'); books(860, 1380, 1, 'bkA');
+  tag('ChatGPT prompts', 700, 1230, 44, { fill: PAL.paper, rot: 0.04, s: popS(TIMELINE.cues.chat) });
   capStrip('Then I enrolled.');
 }
 
@@ -958,7 +964,7 @@ function sceneMarket() {
   cut(rect(-30, -30, W + 60, H + 60, 0), PAL.yellow, { key: 'wallM', shadow: false, tear: 0, shade: false, pat: pat.stripes('rgba(255,255,255,0.20)', 30, 80) });
   cut(ellipsePts(800, 380, 80, 80, 0, 36), '#fff2a8', { key: 'sunM', crayon: '#e6b23a' });
   [[200, 340], [480, 280]].forEach(([x, y], i) => cut(ellipsePts(x + Math.sin(TT + i) * 10, y, 70, 28, 0, 20), '#ffffff', { key: 'cM' + i, sb: 6 }));
-  cut(rect(130, 540, 820, 70, 6), PAL.orange, { key: 'awn', pat: pat.stripes('rgba(255,255,255,0.5)', 38, 76), sy: 8 });
+  cut(rect(130, 540, 820, 70, 6), PAL.pink, { key: 'awn', pat: pat.stripes('rgba(255,255,255,0.5)', 38, 76), sy: 8 });
   cut(rect(-30, 1260, W + 60, 700, 0), PAL.woodL, { key: 'flM', tear: 0, pat: pat.grainWood('rgba(120,60,20,0.18)') });
   person(300, 980, 1.15, { ...EM, mood: 'happy', key: 'emM' });
   // sales bars rise
@@ -974,13 +980,13 @@ function sceneVendors() {
   cut(rect(-30, -30, W + 60, H + 60, 0), PAL.mint, { key: 'wallV', shadow: false, tear: 0, shade: false, pat: pat.gingham('rgba(255,255,255,0.20)', 30) });
   const cols = [PAL.pink, PAL.purple, PAL.blue, PAL.teal];
   for (let i = 0; i < 4; i++) {
-    const x = 70 + i * 220, on = TT > TIMELINE.cues.vend + i * 2.0, y = 600 + (i % 2) * 90;
+    const x = 70 + i * 220, on = TT > TIMELINE.cues.vend + i * 0.8, y = 600 + (i % 2) * 90;
     cut(rect(x, y, 190, 360, 8), PAL.paper, { key: 'st' + i, sb: 8, pat: pat.lines('rgba(42,29,24,0.14)', 30, 40) });
     cut(rect(x - 8, y - 70, 206, 74, 4), cols[i], { key: 'stA' + i, pat: pat.stripes('rgba(255,255,255,0.4)', 22, 44), sy: 6 });
-    if (on) { const k = popS(TIMELINE.cues.vend + i * 2.0); spark(x + 95, y + 190, 54 * k, { rays: 8, mood: 'happy', key: 'spV' + i }); }
+    if (on) { const k = popS(TIMELINE.cues.vend + i * 0.8); spark(x + 95, y + 190, 54 * k, { rays: 8, mood: 'happy', key: 'spV' + i }); }
   }
   person(540, 1190, 0.7, { ...EM, mood: 'happy', key: 'emV' });
-  tag('N80,000 / setup', 540, 400, 64, { fill: PAL.paper, rot: -0.03, s: popS(TIMELINE.cues.vend + 6.5) });
+  tag('N80,000 / setup', 540, 400, 64, { fill: PAL.paper, rot: -0.03, s: popS(TIMELINE.cues.naira) });
   capStrip('Setting up other vendors.');
 }
 
@@ -989,8 +995,8 @@ function sceneEnd() {
   cut(rect(-30, -30, W + 60, H + 60, 0), PAL.teal, { key: 'wallE', shadow: false, tear: 0, shade: false, pat: pat.dots('rgba(255,255,255,0.14)', 5, 64) });
   person(540, 960, 1.4, { ...EM, mood: 'happy', key: 'emE' });
   spark(840, 560, 90, { rays: 10, mood: 'happy', key: 'spE' });
-  tag('SkillBridge Academy', 540, 460, 72, { fill: PAL.paper, rot: -0.03, s: popS(40.2) });
-  for (let i = 0; i < 14; i++) { const R = RNG('conf', i), k = ((TT - 40) * 0.22 + R.f()) % 1, cx = R.r(80, 1000) + Math.sin(TT * 2 + i) * 20, cy = 250 + k * 1150; cut(rotP(rect(cx - 12, cy - 8, 24, 16, 2), cx, cy, TT * 3 + i), [PAL.pink, PAL.yellow, PAL.mint, PAL.purple][i % 4], { key: 'cfT' + i, shadow: false, tear: 0.3 }); }
+  tag('SkillBridge Academy', 540, 460, 72, { fill: PAL.paper, rot: -0.03, s: popS(TIMELINE.cues.endtag) });
+  for (let i = 0; i < 14; i++) { const R = RNG('conf', i), k = ((TT - 38.5) * 0.22 + R.f()) % 1, cx = R.r(80, 1000) + Math.sin(TT * 2 + i) * 20, cy = 250 + k * 1150; cut(rotP(rect(cx - 12, cy - 8, 24, 16, 2), cx, cy, TT * 3 + i), [PAL.pink, PAL.yellow, PAL.mint, PAL.purple][i % 4], { key: 'cfT' + i, shadow: false, tear: 0.3 }); }
   for (let i = 0; i < 10; i++) { const R = RNG('cf', i); sparkle(R.r(80, 960), R.r(300, 900) + Math.sin(TT * 2 + i) * 10, R.r(6, 14), '#fff8dc'); }
   capStrip('It transformed my business.');
 }
@@ -1329,24 +1335,17 @@ async function buildScore(sampleRate = 48000, part = 'mix', normIn = null) {
   }
   const claudeMotif = (t, notes, vel) => notes.forEach(([n, dt], i) => pluck(t + dt, nz(n), vel, -0.15 + i * 0.1, 0.6, 1300, 0.35));
   const childMotif = (t, notes, vel, bright = 5200, send = 0.3) => notes.forEach(([n, dt], i) => pluck(t + dt, nz(n), vel, 0.2 - i * 0.1, 0.32, bright, send));
-  // SCORE BODY — SkillBridge / Emeka. Thin and tired -> lift at the academy -> blips -> near silence -> the loudest hit at 25.0 -> arpeggio -> resolve.
+  // SCORE BODY — sound effects only (to = 's'): the music is the user's Ai33 track, the voice is the Ai33 voice-over.
+  // The picture's sound moments: clock ticks, a blip per n8n node and sheet row, a chime on the link, the payoff hit at 29.5.
   const T = TIMELINE, cu = T.cues;
-  to = 'm';
-  pad(0.0, 10.0, ['D2', 'A2'], 0.025, { type: 'triangle', cut: 500, att: 1, rel: 0.5 });
-  for (let t = 0.5; t < 10; t += 1.0) noiseHit(t, 0.03, 'bandpass', 3000, 3, 0.18, 0);                       // the clock tick
-  pad(10.0, 22.5, ['D3', 'A3', 'Fs4', 'B3'], 0.04, { cut: 1400, att: 0.4, rel: 0.4, send: 0.3 });
-  for (let b = 10.0; b < 22.0; b += 0.5) pluck(b, nz(['D4', 'Fs4', 'A4', 'B4'][Math.round(b * 2) % 4]), 0.12, 0, 0.3, 2800, 0.2);
   to = 's';
+  for (let t = 1.5; t < 11.5; t += 1.0) noiseHit(t, 0.03, 'bandpass', 3000, 3, 0.16, 0);                                // the clock tick
   [cu.wire1, cu.wire2, cu.wire3].forEach((t) => blip(t - 0.5, 600, 1200, 0.12, 0.16));
   for (let r = 0; r < 5; r++) blip(cu.row + r * 0.5, 900, 1500, 0.08, 0.14);
   chime(cu.link, [nz('D5'), nz('A5')], 0.1);
-  to = 'm';
-  // 23.5 -> 25.0: nothing but room tone (the silence), then the stab
-  chime(25.0, [nz('D5'), nz('Fs5'), nz('A5')], 0.14); sub(25.0, 0.55);
-  pad(25.05, 39.9, ['D3', 'A3', 'D4', 'Fs4'], 0.045, { cut: 1400, att: 0.25, rel: 0.4, send: 0.4 });
-  for (let b = 32.0; b < 40.0; b += 0.5) pluck(b, nz(['D4', 'Fs4', 'A4', 'D5'][Math.round(b * 2) % 4]), 0.12, 0, 0.3, 3000, 0.25);
-  chime(40.0, [nz('D5'), nz('A5')], 0.06);
-  pad(40.0, 45.05, ['D3', 'A3', 'Fs4'], 0.012, { cut: 1100, att: 0.4, rel: 0.6, send: 0.4 });
+  chime(29.5, [nz('D5'), nz('Fs5'), nz('A5')], 0.16); sub(29.5, 0.55);                                                   // the payoff, in the pause before "I saved"
+  sweep(28.9, 29.45, 0.012, 600, 3200, 0);
+  chime(38.8, [nz('D5'), nz('A5')], 0.08);
   // =====================================================================
   //  kit/score-tail.js — render, fold the tail over the loop point, loudness stage
   //  (RMS-normalise to -17 dBFS, look-ahead limiter at -1 dBFS; stems share the mix gain curve)

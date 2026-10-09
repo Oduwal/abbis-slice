@@ -1,0 +1,355 @@
+[
+  {
+    "language_code": "eng",
+    "language_probability": 0.9628822207450867,
+    "text": "Two months ago, I was spending over three hours every single night manually typing WhatsApp receipts and tracking orders for my shop",
+    "words": [
+      {
+        "text": "Two",
+        "start": 0.22,
+        "end": 0.36,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000064490144723095
+      },
+      {
+        "text": " ",
+        "start": 0.36,
+        "end": 0.44,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": "months",
+        "start": 0.44,
+        "end": 0.64,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": " ",
+        "start": 0.64,
+        "end": 0.68,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -1.1920928244535389e-7
+      },
+      {
+        "text": "ago,",
+        "start": 0.7,
+        "end": 0.92,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000035164281138477804
+      },
+      {
+        "text": " ",
+        "start": 0.92,
+        "end": 1.22,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -7.152555099310121e-7
+      },
+      {
+        "text": "I",
+        "start": 1.22,
+        "end": 1.24,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -7.152555099310121e-7
+      },
+      {
+        "text": " ",
+        "start": 1.24,
+        "end": 1.28,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": "was",
+        "start": 1.28,
+        "end": 1.4,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": " ",
+        "start": 1.4,
+        "end": 1.5,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -2.3841855067985307e-7
+      },
+      {
+        "text": "spending",
+        "start": 1.5,
+        "end": 1.84,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -2.3841855067985307e-7
+      },
+      {
+        "text": " ",
+        "start": 1.84,
+        "end": 1.9,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": "over",
+        "start": 1.9,
+        "end": 2.12,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": " ",
+        "start": 2.12,
+        "end": 2.18,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00001680836794548668
+      },
+      {
+        "text": "three",
+        "start": 2.18,
+        "end": 2.36,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00001680836794548668
+      },
+      {
+        "text": " ",
+        "start": 2.36,
+        "end": 2.5,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000020265558760002023
+      },
+      {
+        "text": "hours",
+        "start": 2.5,
+        "end": 2.82,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000020265558760002023
+      },
+      {
+        "text": " ",
+        "start": 2.82,
+        "end": 2.98,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -1.1920928244535389e-7
+      },
+      {
+        "text": "every",
+        "start": 2.98,
+        "end": 3.2,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -1.1920928244535389e-7
+      },
+      {
+        "text": " ",
+        "start": 3.2,
+        "end": 3.3,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -3.576278118089249e-7
+      },
+      {
+        "text": "single",
+        "start": 3.3,
+        "end": 3.58,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -3.576278118089249e-7
+      },
+      {
+        "text": " ",
+        "start": 3.58,
+        "end": 3.62,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": "night",
+        "start": 3.62,
+        "end": 3.86,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": " ",
+        "start": 3.86,
+        "end": 4.14,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000016927575416048057
+      },
+      {
+        "text": "manually",
+        "start": 4.14,
+        "end": 4.62,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000016927575416048057
+      },
+      {
+        "text": " ",
+        "start": 4.62,
+        "end": 4.66,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000011920922133867862
+      },
+      {
+        "text": "typing",
+        "start": 4.66,
+        "end": 4.98,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000011920922133867862
+      },
+      {
+        "text": " ",
+        "start": 4.98,
+        "end": 5.08,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000007152531907195225
+      },
+      {
+        "text": "WhatsApp",
+        "start": 5.08,
+        "end": 5.48,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000007152531907195225
+      },
+      {
+        "text": " ",
+        "start": 5.48,
+        "end": 5.52,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00002288792165927589
+      },
+      {
+        "text": "receipts",
+        "start": 5.52,
+        "end": 5.94,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00002288792165927589
+      },
+      {
+        "text": " ",
+        "start": 5.94,
+        "end": 6.22,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000018954096958623268
+      },
+      {
+        "text": "and",
+        "start": 6.22,
+        "end": 6.36,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000018954096958623268
+      },
+      {
+        "text": " ",
+        "start": 6.36,
+        "end": 6.4,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000015497195136049413
+      },
+      {
+        "text": "tracking",
+        "start": 6.4,
+        "end": 6.72,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000015497195136049413
+      },
+      {
+        "text": " ",
+        "start": 6.72,
+        "end": 6.84,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -3.576278118089249e-7
+      },
+      {
+        "text": "orders",
+        "start": 6.84,
+        "end": 7.12,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -3.576278118089249e-7
+      },
+      {
+        "text": " ",
+        "start": 7.12,
+        "end": 7.16,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00013982271775603294
+      },
+      {
+        "text": "for",
+        "start": 7.16,
+        "end": 7.24,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00013982271775603294
+      },
+      {
+        "text": " ",
+        "start": 7.24,
+        "end": 7.28,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": "my",
+        "start": 7.28,
+        "end": 7.42,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": " ",
+        "start": 7.42,
+        "end": 7.46,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -2.3841855067985307e-7
+      },
+      {
+        "text": "shop",
+        "start": 7.46,
+        "end": 7.74,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -2.3841855067985307e-7
+      }
+    ],
+    "transcription_id": "KqXItzlqwnw0Zs2M0Zxy",
+    "audio_duration_secs": 8.097959
+  }
+]

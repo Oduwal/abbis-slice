@@ -1,0 +1,31 @@
+{
+ "id": "cb3b6543-989e-4984-9861-4c804b9500b1",
+ "created_at": "2026-10-09T19:51:41.826Z",
+ "status": "done",
+ "credit_cost": 34,
+ "metadata": {
+  "v3": {
+   "provider": "elevenlabs",
+   "raw_voice_id": "elevenlabs_uiGZfz78AsprKkmRuTfp"
+  },
+  "data": {
+   "model_id": "eleven_multilingual_v2",
+   "multi_turn": false,
+   "with_loudnorm": false,
+   "with_transcript": true
+  },
+  "query": {},
+  "srt_url": "https://cdn.ai33.pro/v3/tts/cb3b6543-989e-4984-9861-4c804b9500b1_1791575501920.srt?name=I%20was%20constantly%20exh.srt&dl=1",
+  "json_url": "https://cdn.ai33.pro/v3/tts/cb3b6543-989e-4984-9861-4c804b9500b1_1791575501920.json?name=I%20was%20constantly%20exh.json&dl=1",
+  "voice_id": "uiGZfz78AsprKkmRuTfp",
+  "transcript_status": "completed",
+  "transcript_credit_cost": 4,
+  "audio_url": "https://cdn.ai33.pro/v3/tts/cb3b6543-989e-4984-9861-4c804b9500b1_1791575501920.mp3?name=I%20was%20constantly%20exh.mp3&dl=1"
+ },
+ "progress": 100,
+ "type": "tts",
+ "updated_at": "2026-10-09T19:52:16.000Z",
+ "text": "I was constantly exhausted.",
+ "text_length": 27,
+ "text_truncated": false
+}

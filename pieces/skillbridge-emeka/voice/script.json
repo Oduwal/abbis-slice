@@ -1,0 +1,48 @@
+{
+ "lead": 1.0,
+ "tail": 3.16,
+ "lines": [
+  {
+   "id": "open",
+   "text": "Two months ago, I was spending over three hours every single night manually typing WhatsApp receipts and tracking orders for my shop.",
+   "file": "open.mp3",
+   "after": 0.5
+  },
+  {
+   "id": "tired",
+   "text": "I was constantly exhausted.",
+   "file": "tired.mp3",
+   "after": 1.5
+  },
+  {
+   "id": "enrol",
+   "text": "Then I enrolled in SkillBridge Academy.",
+   "file": "enrol.mp3",
+   "after": 0.8
+  },
+  {
+   "id": "learn",
+   "text": "I didn't just learn basic ChatGPT prompts. I learned how to connect OpenAI to WhatsApp and Google Sheets, using n eight n.",
+   "file": "learn.mp3",
+   "after": 0.7
+  },
+  {
+   "id": "order",
+   "text": "Now, when a customer orders at two A M, the system logs the order and sends a Paystack link automatically.",
+   "file": "order.mp3",
+   "after": 1.7
+  },
+  {
+   "id": "saved",
+   "text": "I saved three hours daily, grew my monthly sales, and even started setting up automations for other vendors in my market, for eighty thousand naira per setup.",
+   "file": "saved.mp3",
+   "after": 0.8
+  },
+  {
+   "id": "close",
+   "text": "SkillBridge didn't just teach me tech. It transformed my business.",
+   "file": "close.mp3",
+   "after": 0
+  }
+ ]
+}

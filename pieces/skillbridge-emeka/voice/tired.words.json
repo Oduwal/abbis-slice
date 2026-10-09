@@ -1,0 +1,67 @@
+[
+  {
+    "language_code": "eng",
+    "language_probability": 0.9985916018486023,
+    "text": "I was constantly exhausted",
+    "words": [
+      {
+        "text": "I",
+        "start": 0.24,
+        "end": 0.28,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000017881377516459906
+      },
+      {
+        "text": " ",
+        "start": 0.28,
+        "end": 0.3,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -5.960462772236497e-7
+      },
+      {
+        "text": "was",
+        "start": 0.3,
+        "end": 0.42,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -5.960462772236497e-7
+      },
+      {
+        "text": " ",
+        "start": 0.42,
+        "end": 0.46,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": "constantly",
+        "start": 0.46,
+        "end": 0.88,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": 0
+      },
+      {
+        "text": " ",
+        "start": 0.88,
+        "end": 0.92,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000004172316494077677
+      },
+      {
+        "text": "exhausted",
+        "start": 0.92,
+        "end": 1.46,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000004172316494077677
+      }
+    ],
+    "transcription_id": "yZLZ8KIfTT4MMjs6NcbN",
+    "audio_duration_secs": 1.776327
+  }
+]

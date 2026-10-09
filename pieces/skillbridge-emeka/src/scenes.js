@@ -60,16 +60,18 @@ function sceneAcademy() {
   cut(rect(-30, 1280, W + 60, 700, 0), PAL.green, { key: 'grA', tear: 0, sy: -4 });
   const s = popS(TIMELINE.cues.enroll);
   person(380, 1040, 1.15, { ...EM, mood: 'happy', key: 'emA' });
-  ctx.save(); ctx.translate(690, 880); ctx.rotate(-0.05); ctx.scale(Math.max(0.01, s), Math.max(0.01, s));
+  ctx.save(); ctx.translate(690, 880 + Math.sin(TT * 1.6) * 8); ctx.rotate(-0.05 + Math.sin(TT * 1.1) * 0.025); ctx.scale(Math.max(0.01, s), Math.max(0.01, s));
   cut(rect(-190, -230, 380, 460, 14), PAL.paper, { key: 'card', sb: 14, sy: 9, pat: pat.lines('rgba(42,29,24,0.18)', 40, 80) });
   cut(rect(-190, -230, 380, 90, 10), PAL.teal, { key: 'cardH', shadow: false });
   handText('SkillBridge', -150, -158, 54, '#fff', { key: 'sb1', weight: 700 });
   handText('Academy', -150, -40, 58, PAL.ink, { key: 'sb2', weight: 700 });
-  handText('ENROLLED', -150, 70, 38, PAL.greenD, { key: 'sb3', weight: 700 });
-  ink(arcPts(0, 160, 38, Math.PI * 1.05, Math.PI * 1.95, 12), { w: 8, color: PAL.greenD, key: 'chk' });
+  handText('ENROLLED', -150, 70, 38, PAL.greenD, { key: 'sb3', weight: 700, frac: ev(12.9, 0.7) });
+  if (ev(13.9, 0.6) > 0) ink(arcPts(0, 160, 38, Math.PI * 1.05, Math.PI * 1.05 + Math.PI * 0.9 * ev(13.9, 0.6), 12), { w: 8, color: PAL.greenD, key: 'chk' });
   ctx.restore();
   for (let i = 0; i < 6; i++) sparkle(120 + i * 150, 560 + (i % 2) * 90 + Math.sin(TT * 2 + i) * 8, 10 + (i % 3) * 4, '#fff8dc');
+  for (let i = 0; i < 10; i++) { const R = RNG('cfA', i), k = ((TT - 11.5) * 0.18 + R.f()) % 1, cx = R.r(80, 1000) + Math.sin(TT * 2 + i) * 20, cy = 200 + k * 1100; cut(rot(rect(cx - 12, cy - 8, 24, 16, 2), cx, cy, TT * 3 + i), [PAL.pink, PAL.yellow, PAL.teal, PAL.purple][i % 4], { key: 'cfA' + i, shadow: false, tear: 0.3 }); }
   plant(160, 1380, 1, PAL.blue, 'plA'); books(860, 1380, 1, 'bkA');
+  tag('ChatGPT prompts', 700, 1230, 44, { fill: PAL.paper, rot: 0.04, s: popS(TIMELINE.cues.chat) });
   capStrip('Then I enrolled.');
 }
 
@@ -145,7 +147,7 @@ function sceneMarket() {
   cut(rect(-30, -30, W + 60, H + 60, 0), PAL.yellow, { key: 'wallM', shadow: false, tear: 0, shade: false, pat: pat.stripes('rgba(255,255,255,0.20)', 30, 80) });
   cut(ellipsePts(800, 380, 80, 80, 0, 36), '#fff2a8', { key: 'sunM', crayon: '#e6b23a' });
   [[200, 340], [480, 280]].forEach(([x, y], i) => cut(ellipsePts(x + Math.sin(TT + i) * 10, y, 70, 28, 0, 20), '#ffffff', { key: 'cM' + i, sb: 6 }));
-  cut(rect(130, 540, 820, 70, 6), PAL.orange, { key: 'awn', pat: pat.stripes('rgba(255,255,255,0.5)', 38, 76), sy: 8 });
+  cut(rect(130, 540, 820, 70, 6), PAL.pink, { key: 'awn', pat: pat.stripes('rgba(255,255,255,0.5)', 38, 76), sy: 8 });
   cut(rect(-30, 1260, W + 60, 700, 0), PAL.woodL, { key: 'flM', tear: 0, pat: pat.grainWood('rgba(120,60,20,0.18)') });
   person(300, 980, 1.15, { ...EM, mood: 'happy', key: 'emM' });
   // sales bars rise
@@ -161,13 +163,13 @@ function sceneVendors() {
   cut(rect(-30, -30, W + 60, H + 60, 0), PAL.mint, { key: 'wallV', shadow: false, tear: 0, shade: false, pat: pat.gingham('rgba(255,255,255,0.20)', 30) });
   const cols = [PAL.pink, PAL.purple, PAL.blue, PAL.teal];
   for (let i = 0; i < 4; i++) {
-    const x = 70 + i * 220, on = TT > TIMELINE.cues.vend + i * 2.0, y = 600 + (i % 2) * 90;
+    const x = 70 + i * 220, on = TT > TIMELINE.cues.vend + i * 0.8, y = 600 + (i % 2) * 90;
     cut(rect(x, y, 190, 360, 8), PAL.paper, { key: 'st' + i, sb: 8, pat: pat.lines('rgba(42,29,24,0.14)', 30, 40) });
     cut(rect(x - 8, y - 70, 206, 74, 4), cols[i], { key: 'stA' + i, pat: pat.stripes('rgba(255,255,255,0.4)', 22, 44), sy: 6 });
-    if (on) { const k = popS(TIMELINE.cues.vend + i * 2.0); spark(x + 95, y + 190, 54 * k, { rays: 8, mood: 'happy', key: 'spV' + i }); }
+    if (on) { const k = popS(TIMELINE.cues.vend + i * 0.8); spark(x + 95, y + 190, 54 * k, { rays: 8, mood: 'happy', key: 'spV' + i }); }
   }
   person(540, 1190, 0.7, { ...EM, mood: 'happy', key: 'emV' });
-  tag('N80,000 / setup', 540, 400, 64, { fill: PAL.paper, rot: -0.03, s: popS(TIMELINE.cues.vend + 6.5) });
+  tag('N80,000 / setup', 540, 400, 64, { fill: PAL.paper, rot: -0.03, s: popS(TIMELINE.cues.naira) });
   capStrip('Setting up other vendors.');
 }
 
@@ -176,8 +178,8 @@ function sceneEnd() {
   cut(rect(-30, -30, W + 60, H + 60, 0), PAL.teal, { key: 'wallE', shadow: false, tear: 0, shade: false, pat: pat.dots('rgba(255,255,255,0.14)', 5, 64) });
   person(540, 960, 1.4, { ...EM, mood: 'happy', key: 'emE' });
   spark(840, 560, 90, { rays: 10, mood: 'happy', key: 'spE' });
-  tag('SkillBridge Academy', 540, 460, 72, { fill: PAL.paper, rot: -0.03, s: popS(40.2) });
-  for (let i = 0; i < 14; i++) { const R = RNG('conf', i), k = ((TT - 40) * 0.22 + R.f()) % 1, cx = R.r(80, 1000) + Math.sin(TT * 2 + i) * 20, cy = 250 + k * 1150; cut(rotP(rect(cx - 12, cy - 8, 24, 16, 2), cx, cy, TT * 3 + i), [PAL.pink, PAL.yellow, PAL.mint, PAL.purple][i % 4], { key: 'cfT' + i, shadow: false, tear: 0.3 }); }
+  tag('SkillBridge Academy', 540, 460, 72, { fill: PAL.paper, rot: -0.03, s: popS(TIMELINE.cues.endtag) });
+  for (let i = 0; i < 14; i++) { const R = RNG('conf', i), k = ((TT - 38.5) * 0.22 + R.f()) % 1, cx = R.r(80, 1000) + Math.sin(TT * 2 + i) * 20, cy = 250 + k * 1150; cut(rotP(rect(cx - 12, cy - 8, 24, 16, 2), cx, cy, TT * 3 + i), [PAL.pink, PAL.yellow, PAL.mint, PAL.purple][i % 4], { key: 'cfT' + i, shadow: false, tear: 0.3 }); }
   for (let i = 0; i < 10; i++) { const R = RNG('cf', i); sparkle(R.r(80, 960), R.r(300, 900) + Math.sin(TT * 2 + i) * 10, R.r(6, 14), '#fff8dc'); }
   capStrip('It transformed my business.');
 }

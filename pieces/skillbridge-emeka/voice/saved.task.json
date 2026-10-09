@@ -1,0 +1,31 @@
+{
+ "id": "107fc724-1549-4b88-84ea-c487c2c5680c",
+ "created_at": "2026-10-09T19:55:11.412Z",
+ "status": "done",
+ "credit_cost": 202,
+ "metadata": {
+  "v3": {
+   "provider": "elevenlabs",
+   "raw_voice_id": "elevenlabs_uiGZfz78AsprKkmRuTfp"
+  },
+  "data": {
+   "model_id": "eleven_multilingual_v2",
+   "multi_turn": false,
+   "with_loudnorm": false,
+   "with_transcript": true
+  },
+  "query": {},
+  "srt_url": "https://cdn.ai33.pro/v3/tts/107fc724-1549-4b88-84ea-c487c2c5680c_1791575711507.srt?name=I%20saved%20three%20hours%20.srt&dl=1",
+  "json_url": "https://cdn.ai33.pro/v3/tts/107fc724-1549-4b88-84ea-c487c2c5680c_1791575711507.json?name=I%20saved%20three%20hours%20.json&dl=1",
+  "voice_id": "uiGZfz78AsprKkmRuTfp",
+  "transcript_status": "completed",
+  "transcript_credit_cost": 26,
+  "audio_url": "https://cdn.ai33.pro/v3/tts/107fc724-1549-4b88-84ea-c487c2c5680c_1791575711507.mp3?name=I%20saved%20three%20hours%20.mp3&dl=1"
+ },
+ "progress": 100,
+ "type": "tts",
+ "updated_at": "2026-10-09T19:55:27.000Z",
+ "text": "I saved three hours daily, grew my monthly sales, and even started setting up automations for other vendors in my market, for eighty thousand naira per setup.",
+ "text_length": 158,
+ "text_truncated": false
+}

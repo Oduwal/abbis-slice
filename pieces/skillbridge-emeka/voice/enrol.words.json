@@ -1,0 +1,115 @@
+[
+  {
+    "language_code": "eng",
+    "language_probability": 0.9614112377166748,
+    "text": "Then I enrolled in Skill Bridge Academy",
+    "words": [
+      {
+        "text": "Then",
+        "start": 0.22,
+        "end": 0.32,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000068662193370983
+      },
+      {
+        "text": " ",
+        "start": 0.32,
+        "end": 0.38,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00020358874462544918
+      },
+      {
+        "text": "I",
+        "start": 0.38,
+        "end": 0.42,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00020358874462544918
+      },
+      {
+        "text": " ",
+        "start": 0.42,
+        "end": 0.44,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000003814689989667386
+      },
+      {
+        "text": "enrolled",
+        "start": 0.44,
+        "end": 0.78,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000003814689989667386
+      },
+      {
+        "text": " ",
+        "start": 0.78,
+        "end": 0.82,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -3.576278118089249e-7
+      },
+      {
+        "text": "in",
+        "start": 0.82,
+        "end": 0.94,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -3.576278118089249e-7
+      },
+      {
+        "text": " ",
+        "start": 0.94,
+        "end": 0.98,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00017557987303007394
+      },
+      {
+        "text": "Skill",
+        "start": 0.98,
+        "end": 1.18,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00017557987303007394
+      },
+      {
+        "text": " ",
+        "start": 1.18,
+        "end": 1.24,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.3288145065307617
+      },
+      {
+        "text": "Bridge",
+        "start": 1.24,
+        "end": 1.42,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.3288145065307617
+      },
+      {
+        "text": " ",
+        "start": 1.42,
+        "end": 1.44,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000010967194612021558
+      },
+      {
+        "text": "Academy",
+        "start": 1.44,
+        "end": 1.88,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000010967194612021558
+      }
+    ],
+    "transcription_id": "vGXRtixE9SqOaAcm7WS1",
+    "audio_duration_secs": 2.194286
+  }
+]

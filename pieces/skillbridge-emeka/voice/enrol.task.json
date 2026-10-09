@@ -1,0 +1,31 @@
+{
+ "id": "21c50736-5e82-459c-9d3e-e20caa54eb5c",
+ "created_at": "2026-10-09T19:52:20.305Z",
+ "status": "done",
+ "credit_cost": 49,
+ "metadata": {
+  "v3": {
+   "provider": "elevenlabs",
+   "raw_voice_id": "elevenlabs_uiGZfz78AsprKkmRuTfp"
+  },
+  "data": {
+   "model_id": "eleven_multilingual_v2",
+   "multi_turn": false,
+   "with_loudnorm": false,
+   "with_transcript": true
+  },
+  "query": {},
+  "srt_url": "https://cdn.ai33.pro/v3/tts/21c50736-5e82-459c-9d3e-e20caa54eb5c_1791575540400.srt?name=Then%20I%20enrolled%20in%20S.srt&dl=1",
+  "json_url": "https://cdn.ai33.pro/v3/tts/21c50736-5e82-459c-9d3e-e20caa54eb5c_1791575540400.json?name=Then%20I%20enrolled%20in%20S.json&dl=1",
+  "voice_id": "uiGZfz78AsprKkmRuTfp",
+  "transcript_status": "completed",
+  "transcript_credit_cost": 6,
+  "audio_url": "https://cdn.ai33.pro/v3/tts/21c50736-5e82-459c-9d3e-e20caa54eb5c_1791575540400.mp3?name=Then%20I%20enrolled%20in%20S.mp3&dl=1"
+ },
+ "progress": 100,
+ "type": "tts",
+ "updated_at": "2026-10-09T19:53:02.000Z",
+ "text": "Then I enrolled in SkillBridge Academy.",
+ "text_length": 39,
+ "text_truncated": false
+}

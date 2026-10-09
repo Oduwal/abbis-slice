@@ -1,0 +1,31 @@
+{
+ "id": "e762e3d8-c073-48fc-8ec0-bd82ef73d174",
+ "created_at": "2026-10-09T19:55:29.893Z",
+ "status": "done",
+ "credit_cost": 83,
+ "metadata": {
+  "v3": {
+   "provider": "elevenlabs",
+   "raw_voice_id": "elevenlabs_uiGZfz78AsprKkmRuTfp"
+  },
+  "data": {
+   "model_id": "eleven_multilingual_v2",
+   "multi_turn": false,
+   "with_loudnorm": false,
+   "with_transcript": true
+  },
+  "query": {},
+  "srt_url": "https://cdn.ai33.pro/v3/tts/e762e3d8-c073-48fc-8ec0-bd82ef73d174_1791575729988.srt?name=SkillBridge%20didn%27t%20j.srt&dl=1",
+  "json_url": "https://cdn.ai33.pro/v3/tts/e762e3d8-c073-48fc-8ec0-bd82ef73d174_1791575729988.json?name=SkillBridge%20didn%27t%20j.json&dl=1",
+  "voice_id": "uiGZfz78AsprKkmRuTfp",
+  "transcript_status": "completed",
+  "transcript_credit_cost": 10,
+  "audio_url": "https://cdn.ai33.pro/v3/tts/e762e3d8-c073-48fc-8ec0-bd82ef73d174_1791575729988.mp3?name=SkillBridge%20didn%27t%20j.mp3&dl=1"
+ },
+ "progress": 100,
+ "type": "tts",
+ "updated_at": "2026-10-09T19:55:39.000Z",
+ "text": "SkillBridge didn't just teach me tech. It transformed my business.",
+ "text_length": 66,
+ "text_truncated": false
+}

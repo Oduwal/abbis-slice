@@ -1,3 +1,6 @@
 renders/final.mp4
 renders/*.wav
 frames/
+audio/clip*.mp3
+audio/track1.mp3
+audio/urls.txt

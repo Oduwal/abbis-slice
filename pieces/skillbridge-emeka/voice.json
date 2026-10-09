@@ -1,0 +1,736 @@
+{
+ "duration": 44.995,
+ "lead": 1,
+ "tail": 3.16,
+ "lines": [
+  {
+   "id": "open",
+   "text": "Two months ago, I was spending over three hours every single night manually typing WhatsApp receipts and tracking orders for my shop.",
+   "t0": 1,
+   "t1": 8.47,
+   "take": "voice/open.mp3",
+   "words": [
+    {
+     "w": "Two",
+     "t0": 1,
+     "t1": 1.226,
+     "est": true
+    },
+    {
+     "w": "months",
+     "t0": 1.226,
+     "t1": 1.623,
+     "est": true
+    },
+    {
+     "w": "ago,",
+     "t0": 1.623,
+     "t1": 1.849,
+     "est": true
+    },
+    {
+     "w": "I",
+     "t0": 1.849,
+     "t1": 1.962,
+     "est": true
+    },
+    {
+     "w": "was",
+     "t0": 1.962,
+     "t1": 2.188,
+     "est": true
+    },
+    {
+     "w": "spending",
+     "t0": 2.188,
+     "t1": 2.698,
+     "est": true
+    },
+    {
+     "w": "over",
+     "t0": 2.698,
+     "t1": 2.981,
+     "est": true
+    },
+    {
+     "w": "three",
+     "t0": 2.981,
+     "t1": 3.32,
+     "est": true
+    },
+    {
+     "w": "hours",
+     "t0": 3.32,
+     "t1": 3.66,
+     "est": true
+    },
+    {
+     "w": "every",
+     "t0": 3.66,
+     "t1": 3.999,
+     "est": true
+    },
+    {
+     "w": "single",
+     "t0": 3.999,
+     "t1": 4.395,
+     "est": true
+    },
+    {
+     "w": "night",
+     "t0": 4.395,
+     "t1": 4.735,
+     "est": true
+    },
+    {
+     "w": "manually",
+     "t0": 4.735,
+     "t1": 5.244,
+     "est": true
+    },
+    {
+     "w": "typing",
+     "t0": 5.244,
+     "t1": 5.64,
+     "est": true
+    },
+    {
+     "w": "WhatsApp",
+     "t0": 5.64,
+     "t1": 6.15,
+     "est": true
+    },
+    {
+     "w": "receipts",
+     "t0": 6.15,
+     "t1": 6.659,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 6.659,
+     "t1": 6.885,
+     "est": true
+    },
+    {
+     "w": "tracking",
+     "t0": 6.885,
+     "t1": 7.395,
+     "est": true
+    },
+    {
+     "w": "orders",
+     "t0": 7.395,
+     "t1": 7.791,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 7.791,
+     "t1": 8.017,
+     "est": true
+    },
+    {
+     "w": "my",
+     "t0": 8.017,
+     "t1": 8.187,
+     "est": true
+    },
+    {
+     "w": "shop.",
+     "t0": 8.187,
+     "t1": 8.47,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "tired",
+   "text": "I was constantly exhausted.",
+   "t0": 8.97,
+   "t1": 10.241,
+   "take": "voice/tired.mp3",
+   "words": [
+    {
+     "w": "I",
+     "t0": 8.97,
+     "t1": 9.064,
+     "est": true
+    },
+    {
+     "w": "was",
+     "t0": 9.064,
+     "t1": 9.252,
+     "est": true
+    },
+    {
+     "w": "constantly",
+     "t0": 9.252,
+     "t1": 9.77,
+     "est": true
+    },
+    {
+     "w": "exhausted.",
+     "t0": 9.77,
+     "t1": 10.241,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "enrol",
+   "text": "Then I enrolled in SkillBridge Academy.",
+   "t0": 11.741,
+   "t1": 13.447,
+   "take": "voice/enrol.mp3",
+   "words": [
+    {
+     "w": "Then",
+     "t0": 11.741,
+     "t1": 11.96,
+     "est": true
+    },
+    {
+     "w": "I",
+     "t0": 11.96,
+     "t1": 12.047,
+     "est": true
+    },
+    {
+     "w": "enrolled",
+     "t0": 12.047,
+     "t1": 12.441,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 12.441,
+     "t1": 12.572,
+     "est": true
+    },
+    {
+     "w": "SkillBridge",
+     "t0": 12.572,
+     "t1": 13.097,
+     "est": true
+    },
+    {
+     "w": "Academy.",
+     "t0": 13.097,
+     "t1": 13.447,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "learn",
+   "text": "I didn't just learn basic ChatGPT prompts. I learned how to connect OpenAI to WhatsApp and Google Sheets, using n eight n.",
+   "t0": 14.247,
+   "t1": 21.796,
+   "take": "voice/learn.mp3",
+   "words": [
+    {
+     "w": "I",
+     "t0": 14.247,
+     "t1": 14.374,
+     "est": true
+    },
+    {
+     "w": "didn't",
+     "t0": 14.374,
+     "t1": 14.754,
+     "est": true
+    },
+    {
+     "w": "just",
+     "t0": 14.754,
+     "t1": 15.072,
+     "est": true
+    },
+    {
+     "w": "learn",
+     "t0": 15.072,
+     "t1": 15.452,
+     "est": true
+    },
+    {
+     "w": "basic",
+     "t0": 15.452,
+     "t1": 15.833,
+     "est": true
+    },
+    {
+     "w": "ChatGPT",
+     "t0": 15.833,
+     "t1": 16.34,
+     "est": true
+    },
+    {
+     "w": "prompts.",
+     "t0": 16.34,
+     "t1": 16.848,
+     "est": true
+    },
+    {
+     "w": "I",
+     "t0": 16.848,
+     "t1": 16.975,
+     "est": true
+    },
+    {
+     "w": "learned",
+     "t0": 16.975,
+     "t1": 17.482,
+     "est": true
+    },
+    {
+     "w": "how",
+     "t0": 17.482,
+     "t1": 17.736,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 17.736,
+     "t1": 17.926,
+     "est": true
+    },
+    {
+     "w": "connect",
+     "t0": 17.926,
+     "t1": 18.434,
+     "est": true
+    },
+    {
+     "w": "OpenAI",
+     "t0": 18.434,
+     "t1": 18.878,
+     "est": true
+    },
+    {
+     "w": "to",
+     "t0": 18.878,
+     "t1": 19.068,
+     "est": true
+    },
+    {
+     "w": "WhatsApp",
+     "t0": 19.068,
+     "t1": 19.639,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 19.639,
+     "t1": 19.893,
+     "est": true
+    },
+    {
+     "w": "Google",
+     "t0": 19.893,
+     "t1": 20.337,
+     "est": true
+    },
+    {
+     "w": "Sheets,",
+     "t0": 20.337,
+     "t1": 20.781,
+     "est": true
+    },
+    {
+     "w": "using",
+     "t0": 20.781,
+     "t1": 21.162,
+     "est": true
+    },
+    {
+     "w": "n",
+     "t0": 21.162,
+     "t1": 21.289,
+     "est": true
+    },
+    {
+     "w": "eight",
+     "t0": 21.289,
+     "t1": 21.669,
+     "est": true
+    },
+    {
+     "w": "n.",
+     "t0": 21.669,
+     "t1": 21.796,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "order",
+   "text": "Now, when a customer orders at two A M, the system logs the order and sends a Paystack link automatically.",
+   "t0": 22.496,
+   "t1": 28.188,
+   "take": "voice/order.mp3",
+   "words": [
+    {
+     "w": "Now,",
+     "t0": 22.496,
+     "t1": 22.715,
+     "est": true
+    },
+    {
+     "w": "when",
+     "t0": 22.715,
+     "t1": 22.989,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 22.989,
+     "t1": 23.098,
+     "est": true
+    },
+    {
+     "w": "customer",
+     "t0": 23.098,
+     "t1": 23.591,
+     "est": true
+    },
+    {
+     "w": "orders",
+     "t0": 23.591,
+     "t1": 23.974,
+     "est": true
+    },
+    {
+     "w": "at",
+     "t0": 23.974,
+     "t1": 24.138,
+     "est": true
+    },
+    {
+     "w": "two",
+     "t0": 24.138,
+     "t1": 24.357,
+     "est": true
+    },
+    {
+     "w": "A",
+     "t0": 24.357,
+     "t1": 24.466,
+     "est": true
+    },
+    {
+     "w": "M,",
+     "t0": 24.466,
+     "t1": 24.576,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 24.576,
+     "t1": 24.795,
+     "est": true
+    },
+    {
+     "w": "system",
+     "t0": 24.795,
+     "t1": 25.178,
+     "est": true
+    },
+    {
+     "w": "logs",
+     "t0": 25.178,
+     "t1": 25.451,
+     "est": true
+    },
+    {
+     "w": "the",
+     "t0": 25.451,
+     "t1": 25.67,
+     "est": true
+    },
+    {
+     "w": "order",
+     "t0": 25.67,
+     "t1": 25.999,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 25.999,
+     "t1": 26.218,
+     "est": true
+    },
+    {
+     "w": "sends",
+     "t0": 26.218,
+     "t1": 26.546,
+     "est": true
+    },
+    {
+     "w": "a",
+     "t0": 26.546,
+     "t1": 26.656,
+     "est": true
+    },
+    {
+     "w": "Paystack",
+     "t0": 26.656,
+     "t1": 27.148,
+     "est": true
+    },
+    {
+     "w": "link",
+     "t0": 27.148,
+     "t1": 27.422,
+     "est": true
+    },
+    {
+     "w": "automatically.",
+     "t0": 27.422,
+     "t1": 28.188,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "saved",
+   "text": "I saved three hours daily, grew my monthly sales, and even started setting up automations for other vendors in my market, for eighty thousand naira per setup.",
+   "t0": 29.888,
+   "t1": 37.976,
+   "take": "voice/saved.mp3",
+   "words": [
+    {
+     "w": "I",
+     "t0": 29.888,
+     "t1": 29.992,
+     "est": true
+    },
+    {
+     "w": "saved",
+     "t0": 29.992,
+     "t1": 30.305,
+     "est": true
+    },
+    {
+     "w": "three",
+     "t0": 30.305,
+     "t1": 30.619,
+     "est": true
+    },
+    {
+     "w": "hours",
+     "t0": 30.619,
+     "t1": 30.932,
+     "est": true
+    },
+    {
+     "w": "daily,",
+     "t0": 30.932,
+     "t1": 31.245,
+     "est": true
+    },
+    {
+     "w": "grew",
+     "t0": 31.245,
+     "t1": 31.506,
+     "est": true
+    },
+    {
+     "w": "my",
+     "t0": 31.506,
+     "t1": 31.662,
+     "est": true
+    },
+    {
+     "w": "monthly",
+     "t0": 31.662,
+     "t1": 32.08,
+     "est": true
+    },
+    {
+     "w": "sales,",
+     "t0": 32.08,
+     "t1": 32.393,
+     "est": true
+    },
+    {
+     "w": "and",
+     "t0": 32.393,
+     "t1": 32.601,
+     "est": true
+    },
+    {
+     "w": "even",
+     "t0": 32.601,
+     "t1": 32.862,
+     "est": true
+    },
+    {
+     "w": "started",
+     "t0": 32.862,
+     "t1": 33.28,
+     "est": true
+    },
+    {
+     "w": "setting",
+     "t0": 33.28,
+     "t1": 33.697,
+     "est": true
+    },
+    {
+     "w": "up",
+     "t0": 33.697,
+     "t1": 33.854,
+     "est": true
+    },
+    {
+     "w": "automations",
+     "t0": 33.854,
+     "t1": 34.48,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 34.48,
+     "t1": 34.689,
+     "est": true
+    },
+    {
+     "w": "other",
+     "t0": 34.689,
+     "t1": 35.002,
+     "est": true
+    },
+    {
+     "w": "vendors",
+     "t0": 35.002,
+     "t1": 35.419,
+     "est": true
+    },
+    {
+     "w": "in",
+     "t0": 35.419,
+     "t1": 35.576,
+     "est": true
+    },
+    {
+     "w": "my",
+     "t0": 35.576,
+     "t1": 35.732,
+     "est": true
+    },
+    {
+     "w": "market,",
+     "t0": 35.732,
+     "t1": 36.097,
+     "est": true
+    },
+    {
+     "w": "for",
+     "t0": 36.097,
+     "t1": 36.306,
+     "est": true
+    },
+    {
+     "w": "eighty",
+     "t0": 36.306,
+     "t1": 36.671,
+     "est": true
+    },
+    {
+     "w": "thousand",
+     "t0": 36.671,
+     "t1": 37.141,
+     "est": true
+    },
+    {
+     "w": "naira",
+     "t0": 37.141,
+     "t1": 37.454,
+     "est": true
+    },
+    {
+     "w": "per",
+     "t0": 37.454,
+     "t1": 37.663,
+     "est": true
+    },
+    {
+     "w": "setup.",
+     "t0": 37.663,
+     "t1": 37.976,
+     "est": true
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "text": "SkillBridge didn't just teach me tech. It transformed my business.",
+   "t0": 38.776,
+   "t1": 41.835,
+   "take": "voice/close.mp3",
+   "words": [
+    {
+     "w": "SkillBridge",
+     "t0": 38.776,
+     "t1": 39.35,
+     "est": true
+    },
+    {
+     "w": "didn't",
+     "t0": 39.35,
+     "t1": 39.636,
+     "est": true
+    },
+    {
+     "w": "just",
+     "t0": 39.636,
+     "t1": 39.875,
+     "est": true
+    },
+    {
+     "w": "teach",
+     "t0": 39.875,
+     "t1": 40.162,
+     "est": true
+    },
+    {
+     "w": "me",
+     "t0": 40.162,
+     "t1": 40.306,
+     "est": true
+    },
+    {
+     "w": "tech.",
+     "t0": 40.306,
+     "t1": 40.544,
+     "est": true
+    },
+    {
+     "w": "It",
+     "t0": 40.544,
+     "t1": 40.688,
+     "est": true
+    },
+    {
+     "w": "transformed",
+     "t0": 40.688,
+     "t1": 41.261,
+     "est": true
+    },
+    {
+     "w": "my",
+     "t0": 41.261,
+     "t1": 41.405,
+     "est": true
+    },
+    {
+     "w": "business.",
+     "t0": 41.405,
+     "t1": 41.835,
+     "est": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,323 @@
+[
+  {
+    "language_code": "eng",
+    "language_probability": 0.9672349691390991,
+    "text": "I didn't just learn basic ChatGPT prompts. I learned how to connect OpenAI to WhatsApp and Google Sheets using n8n",
+    "words": [
+      {
+        "text": "I",
+        "start": 0.28,
+        "end": 0.3,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00005173549288883805
+      },
+      {
+        "text": " ",
+        "start": 0.3,
+        "end": 0.34,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -3.576278118089249e-7
+      },
+      {
+        "text": "didn't",
+        "start": 0.34,
+        "end": 0.54,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000003039813500767726
+      },
+      {
+        "text": " ",
+        "start": 0.54,
+        "end": 0.6,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -5.960462772236497e-7
+      },
+      {
+        "text": "just",
+        "start": 0.6,
+        "end": 0.76,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -5.960462772236497e-7
+      },
+      {
+        "text": " ",
+        "start": 0.76,
+        "end": 0.82,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000002622600959512056
+      },
+      {
+        "text": "learn",
+        "start": 0.82,
+        "end": 1,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000002622600959512056
+      },
+      {
+        "text": " ",
+        "start": 1,
+        "end": 1.1,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000020265558760002023
+      },
+      {
+        "text": "basic",
+        "start": 1.1,
+        "end": 1.42,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000020265558760002023
+      },
+      {
+        "text": " ",
+        "start": 1.42,
+        "end": 1.5,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000016212332411669195
+      },
+      {
+        "text": "ChatGPT",
+        "start": 1.5,
+        "end": 2.2,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000016212332411669195
+      },
+      {
+        "text": " ",
+        "start": 2.2,
+        "end": 2.28,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00007772143726469949
+      },
+      {
+        "text": "prompts.",
+        "start": 2.28,
+        "end": 2.64,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00010191670207859715
+      },
+      {
+        "text": " ",
+        "start": 2.64,
+        "end": 2.64,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000011920922133867862
+      },
+      {
+        "text": "I",
+        "start": 3.26,
+        "end": 3.3,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000011920922133867862
+      },
+      {
+        "text": " ",
+        "start": 3.3,
+        "end": 3.34,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000017881377516459906
+      },
+      {
+        "text": "learned",
+        "start": 3.34,
+        "end": 3.56,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0000017881377516459906
+      },
+      {
+        "text": " ",
+        "start": 3.56,
+        "end": 3.6,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -1.1920928244535389e-7
+      },
+      {
+        "text": "how",
+        "start": 3.6,
+        "end": 3.68,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -1.1920928244535389e-7
+      },
+      {
+        "text": " ",
+        "start": 3.68,
+        "end": 3.72,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -1.1920928244535389e-7
+      },
+      {
+        "text": "to",
+        "start": 3.72,
+        "end": 3.8,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -1.1920928244535389e-7
+      },
+      {
+        "text": " ",
+        "start": 3.8,
+        "end": 3.84,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000002264974000354414
+      },
+      {
+        "text": "connect",
+        "start": 3.84,
+        "end": 4.14,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000002264974000354414
+      },
+      {
+        "text": " ",
+        "start": 4.14,
+        "end": 4.26,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0002324311062693596
+      },
+      {
+        "text": "OpenAI",
+        "start": 4.26,
+        "end": 4.84,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.0002324311062693596
+      },
+      {
+        "text": " ",
+        "start": 4.84,
+        "end": 4.9,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000004410734163684538
+      },
+      {
+        "text": "to",
+        "start": 4.9,
+        "end": 5,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000004410734163684538
+      },
+      {
+        "text": " ",
+        "start": 5,
+        "end": 5.04,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000014185804502631072
+      },
+      {
+        "text": "WhatsApp",
+        "start": 5.04,
+        "end": 5.48,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000014185804502631072
+      },
+      {
+        "text": " ",
+        "start": 5.48,
+        "end": 5.5,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000022291887944447808
+      },
+      {
+        "text": "and",
+        "start": 5.5,
+        "end": 5.58,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000022291887944447808
+      },
+      {
+        "text": " ",
+        "start": 5.58,
+        "end": 5.66,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -9.536738616588991e-7
+      },
+      {
+        "text": "Google",
+        "start": 5.66,
+        "end": 5.88,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -9.536738616588991e-7
+      },
+      {
+        "text": " ",
+        "start": 5.88,
+        "end": 5.98,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000029205850296420977
+      },
+      {
+        "text": "Sheets",
+        "start": 6,
+        "end": 6.32,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.000029205850296420977
+      },
+      {
+        "text": " ",
+        "start": 6.32,
+        "end": 6.8,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00003731181277544238
+      },
+      {
+        "text": "using",
+        "start": 6.8,
+        "end": 7.1,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.00003731181277544238
+      },
+      {
+        "text": " ",
+        "start": 7.1,
+        "end": 7.18,
+        "type": "spacing",
+        "speaker_id": "speaker_0",
+        "logprob": -0.012515457347035408
+      },
+      {
+        "text": "n8n",
+        "start": 7.18,
+        "end": 7.7,
+        "type": "word",
+        "speaker_id": "speaker_0",
+        "logprob": -0.004172097270609261
+      }
+    ],
+    "transcription_id": "ietCFbocojWzv6MZdjkW",
+    "audio_duration_secs": 8.045714
+  }
+]

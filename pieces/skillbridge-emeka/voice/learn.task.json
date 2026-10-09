@@ -1,0 +1,31 @@
+{
+ "id": "aeb3a690-e0df-4051-b528-7625b3c10e0b",
+ "created_at": "2026-10-09T19:53:06.549Z",
+ "status": "done",
+ "credit_cost": 156,
+ "metadata": {
+  "v3": {
+   "provider": "elevenlabs",
+   "raw_voice_id": "elevenlabs_uiGZfz78AsprKkmRuTfp"
+  },
+  "data": {
+   "model_id": "eleven_multilingual_v2",
+   "multi_turn": false,
+   "with_loudnorm": false,
+   "with_transcript": true
+  },
+  "query": {},
+  "srt_url": "https://cdn.ai33.pro/v3/tts/aeb3a690-e0df-4051-b528-7625b3c10e0b_1791575586644.srt?name=I%20didn%27t%20just%20learn%20.srt&dl=1",
+  "json_url": "https://cdn.ai33.pro/v3/tts/aeb3a690-e0df-4051-b528-7625b3c10e0b_1791575586644.json?name=I%20didn%27t%20just%20learn%20.json&dl=1",
+  "voice_id": "uiGZfz78AsprKkmRuTfp",
+  "transcript_status": "completed",
+  "transcript_credit_cost": 20,
+  "audio_url": "https://cdn.ai33.pro/v3/tts/aeb3a690-e0df-4051-b528-7625b3c10e0b_1791575586644.mp3?name=I%20didn%27t%20just%20learn%20.mp3&dl=1"
+ },
+ "progress": 100,
+ "type": "tts",
+ "updated_at": "2026-10-09T19:53:22.000Z",
+ "text": "I didn't just learn basic ChatGPT prompts. I learned how to connect OpenAI to WhatsApp and Google Sheets, using n eight n.",
+ "text_length": 122,
+ "text_truncated": false
+}
