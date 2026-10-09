@@ -12,7 +12,7 @@
   to = 'm';
   // 23.5 -> 25.0: nothing but room tone (the silence), then the stab
   chime(25.0, [nz('D5'), nz('Fs5'), nz('A5')], 0.14); sub(25.0, 0.55);
-  pad(25.05, 40.0, ['D3', 'A3', 'D4', 'Fs4'], 0.045, { cut: 1400, att: 0.25, rel: 0.4, send: 0.4 });
+  pad(25.05, 39.9, ['D3', 'A3', 'D4', 'Fs4'], 0.045, { cut: 1400, att: 0.25, rel: 0.4, send: 0.4 });
   for (let b = 32.0; b < 40.0; b += 0.5) pluck(b, nz(['D4', 'Fs4', 'A4', 'D5'][Math.round(b * 2) % 4]), 0.12, 0, 0.3, 3000, 0.25);
-  chime(40.0, [nz('D5'), nz('A5')], 0.1);
-  pad(40.0, 45.05, ['D3', 'A3', 'Fs4'], 0.035, { cut: 1100, att: 0.4, rel: 0.6, send: 0.4 });
+  chime(40.0, [nz('D5'), nz('A5')], 0.06);
+  pad(40.0, 45.05, ['D3', 'A3', 'Fs4'], 0.012, { cut: 1100, att: 0.4, rel: 0.6, send: 0.4 });

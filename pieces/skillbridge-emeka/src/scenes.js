@@ -21,6 +21,7 @@ function receipts(n, x0, y0, key) {
     cut(P, PAL.paper, { key: key + i, sb: 5, sy: 3, pat: pat.lines('rgba(42,29,24,0.35)', 22, 30) });
   }
 }
+const rotP = (P, cx, cy, a) => rot(P, cx, cy, a);
 function bubble(x, y, w, h, str, mine, size, key, k = 1) {
   if (k <= 0.01) return;
   ctx.save(); ctx.translate(x, y); ctx.scale(k, k);
@@ -40,7 +41,7 @@ function sceneDesk(late) {
   cat(800, 690, 0.8, PAL.charcoal, 'catN');
   const mood = late ? 'sad' : 'focus';
   person(500, 1000, 1.3, { ...EM, mood, key: 'em' });
-  if (late && Math.floor(TT * 1.5) % 4 === 3) { zzz(660, 800); }
+  if (late && Math.floor(TT * 1.5) % 4 === 3) { zzz(470, 700); }
   cut(rect(-30, 1180, W + 60, 900, 0), PAL.wood, { key: 'desk', tear: 0, pat: pat.grainWood('rgba(120,60,20,0.18)'), sy: -6 });
   const n = Math.min(12, 3 + Math.floor((TT - (late ? 0 : 0)) * (late ? 0.5 : 1.5)) + (late ? 8 : 0));
   receipts(Math.min(n, 12), 170, 1330, 'rcL'); receipts(Math.min(n, 12), 880, 1350, 'rcR');
@@ -176,6 +177,7 @@ function sceneEnd() {
   person(540, 960, 1.4, { ...EM, mood: 'happy', key: 'emE' });
   spark(840, 560, 90, { rays: 10, mood: 'happy', key: 'spE' });
   tag('SkillBridge Academy', 540, 460, 72, { fill: PAL.paper, rot: -0.03, s: popS(40.2) });
+  for (let i = 0; i < 14; i++) { const R = RNG('conf', i), k = ((TT - 40) * 0.22 + R.f()) % 1, cx = R.r(80, 1000) + Math.sin(TT * 2 + i) * 20, cy = 250 + k * 1150; cut(rotP(rect(cx - 12, cy - 8, 24, 16, 2), cx, cy, TT * 3 + i), [PAL.pink, PAL.yellow, PAL.mint, PAL.purple][i % 4], { key: 'cfT' + i, shadow: false, tear: 0.3 }); }
   for (let i = 0; i < 10; i++) { const R = RNG('cf', i); sparkle(R.r(80, 960), R.r(300, 900) + Math.sin(TT * 2 + i) * 10, R.r(6, 14), '#fff8dc'); }
   capStrip('It transformed my business.');
 }

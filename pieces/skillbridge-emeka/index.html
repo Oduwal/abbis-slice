@@ -834,6 +834,7 @@ function receipts(n, x0, y0, key) {
     cut(P, PAL.paper, { key: key + i, sb: 5, sy: 3, pat: pat.lines('rgba(42,29,24,0.35)', 22, 30) });
   }
 }
+const rotP = (P, cx, cy, a) => rot(P, cx, cy, a);
 function bubble(x, y, w, h, str, mine, size, key, k = 1) {
   if (k <= 0.01) return;
   ctx.save(); ctx.translate(x, y); ctx.scale(k, k);
@@ -853,7 +854,7 @@ function sceneDesk(late) {
   cat(800, 690, 0.8, PAL.charcoal, 'catN');
   const mood = late ? 'sad' : 'focus';
   person(500, 1000, 1.3, { ...EM, mood, key: 'em' });
-  if (late && Math.floor(TT * 1.5) % 4 === 3) { zzz(660, 800); }
+  if (late && Math.floor(TT * 1.5) % 4 === 3) { zzz(470, 700); }
   cut(rect(-30, 1180, W + 60, 900, 0), PAL.wood, { key: 'desk', tear: 0, pat: pat.grainWood('rgba(120,60,20,0.18)'), sy: -6 });
   const n = Math.min(12, 3 + Math.floor((TT - (late ? 0 : 0)) * (late ? 0.5 : 1.5)) + (late ? 8 : 0));
   receipts(Math.min(n, 12), 170, 1330, 'rcL'); receipts(Math.min(n, 12), 880, 1350, 'rcR');
@@ -989,6 +990,7 @@ function sceneEnd() {
   person(540, 960, 1.4, { ...EM, mood: 'happy', key: 'emE' });
   spark(840, 560, 90, { rays: 10, mood: 'happy', key: 'spE' });
   tag('SkillBridge Academy', 540, 460, 72, { fill: PAL.paper, rot: -0.03, s: popS(40.2) });
+  for (let i = 0; i < 14; i++) { const R = RNG('conf', i), k = ((TT - 40) * 0.22 + R.f()) % 1, cx = R.r(80, 1000) + Math.sin(TT * 2 + i) * 20, cy = 250 + k * 1150; cut(rotP(rect(cx - 12, cy - 8, 24, 16, 2), cx, cy, TT * 3 + i), [PAL.pink, PAL.yellow, PAL.mint, PAL.purple][i % 4], { key: 'cfT' + i, shadow: false, tear: 0.3 }); }
   for (let i = 0; i < 10; i++) { const R = RNG('cf', i); sparkle(R.r(80, 960), R.r(300, 900) + Math.sin(TT * 2 + i) * 10, R.r(6, 14), '#fff8dc'); }
   capStrip('It transformed my business.');
 }
@@ -1341,10 +1343,10 @@ async function buildScore(sampleRate = 48000, part = 'mix', normIn = null) {
   to = 'm';
   // 23.5 -> 25.0: nothing but room tone (the silence), then the stab
   chime(25.0, [nz('D5'), nz('Fs5'), nz('A5')], 0.14); sub(25.0, 0.55);
-  pad(25.05, 40.0, ['D3', 'A3', 'D4', 'Fs4'], 0.045, { cut: 1400, att: 0.25, rel: 0.4, send: 0.4 });
+  pad(25.05, 39.9, ['D3', 'A3', 'D4', 'Fs4'], 0.045, { cut: 1400, att: 0.25, rel: 0.4, send: 0.4 });
   for (let b = 32.0; b < 40.0; b += 0.5) pluck(b, nz(['D4', 'Fs4', 'A4', 'D5'][Math.round(b * 2) % 4]), 0.12, 0, 0.3, 3000, 0.25);
-  chime(40.0, [nz('D5'), nz('A5')], 0.1);
-  pad(40.0, 45.05, ['D3', 'A3', 'Fs4'], 0.035, { cut: 1100, att: 0.4, rel: 0.6, send: 0.4 });
+  chime(40.0, [nz('D5'), nz('A5')], 0.06);
+  pad(40.0, 45.05, ['D3', 'A3', 'Fs4'], 0.012, { cut: 1100, att: 0.4, rel: 0.6, send: 0.4 });
   // =====================================================================
   //  kit/score-tail.js — render, fold the tail over the loop point, loudness stage
   //  (RMS-normalise to -17 dBFS, look-ahead limiter at -1 dBFS; stems share the mix gain curve)
