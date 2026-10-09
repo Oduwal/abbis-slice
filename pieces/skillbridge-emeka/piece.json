@@ -1,0 +1,8 @@
+{
+  "name": "skillbridge-emeka",
+  "title": "SkillBridge Academy: Emeka",
+  "format": { "width": 1080, "height": 1920, "fps": 24, "bpm": 120, "duration": 45.0, "frames": 1080 },
+  "storyFormat": "F4 mission, cut on the beat",
+  "style": "cut-paper",
+  "review": { "safe": { "top": 240, "bottom": 420, "right": 140 }, "refs": {} }
+}

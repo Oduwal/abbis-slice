@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkillBridge: Emeka</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #1b1714; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { height: min(100vh, calc(100vw * 16 / 9)); width: auto; aspect-ratio: 9 / 16; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  SKILLBRIDGE / EMEKA — 9:16, 45s @ 120 BPM, 24fps. Hard cuts on the beat grid, no morphs (BRIDGES = []):
+//  held shots, then 8ths, then a rush of 16ths (3 frames each, some on odd frames), then a held payoff.
+//  One era per shot; a shot's framing comes from pieceCam() in src/bridges.js. Every era boundary is a hard cut.
+//  Replace the scenes with your piece's (copy src/ from a style's demo for any style but cut paper).
+//  Rules for beat-cut pieces (craft.md): what defines a shot is fully drawn on its first frame — captions and
+//  tags in shots shorter than ~1s must not pop in late; list every cut in TIMELINE.cuts.
+// =====================================================================
+const FPS = 24, W = 1080, H = 1920;
+const BPM = 120, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;   // 0.5 / 0.25 / 0.125s = 12 / 6 / 3 frames
+const DURATION = 45.0;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 240, bottom: 420, right: 140 };
+const HAND = '"Ink Free", "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", "Comic Neue", cursive';
+const CX = 470;
+
+// the shot list: [t0, scene, camera]
+const SHOT_LIST = [
+  [0.0,  'desk',    'wide'],
+  [4.0,  'desk2',   'close'],
+  [10.0, 'academy', 'wide'],
+  [12.5, 'flow',    'wide'],
+  [17.5, 'chat',    'wide'],
+  [22.5, 'pay',     'wide'],
+  [25.0, 'market',  'wide'],
+  [31.0, 'vendors', 'wide'],
+  [40.0, 'end',     'wide'],
+];
+const SCENE = { desk: () => sceneDesk(false), desk2: () => sceneDesk(true), academy: () => sceneAcademy(), flow: () => sceneFlow(), chat: () => sceneChat(), pay: () => scenePay(), market: () => sceneMarket(), vendors: () => sceneVendors(), end: () => sceneEnd() };
+const ERA_LIST = SHOT_LIST.map(([t0, sc], i) => [t0, i + 1 < SHOT_LIST.length ? SHOT_LIST[i + 1][0] : DURATION, SCENE[sc]]);
+const SHOTS = SHOT_LIST.map(([t0, sc, cam], i) => [sc + '-' + cam, i, t0, ERA_LIST[i][1], `${sc} (${cam})`]);
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE,
+  format: 'beat-cut',
+  shots: SHOTS.map(([key, era, t0, t1, title], i) => ({ id: i + 1, key, era, t0, t1, title })),
+  cuts: SHOT_LIST.slice(1).map(([t0]) => t0),
+  fastFrom: 0, fastTo: 0,
+  morphs: [],
+  cues: { buzz: 1.0, enroll: 10.5, wire1: 13.0, wire2: 14.5, wire3: 16.0, order: 18.0, row: 19.5, link: 23.0, sleep: 23.5, bars: 26.0, vend: 32.0, tick: 29.0 },
+  acts: [
+    { name: '1 The grind',     role: 'build',   t0: 0.0,  t1: 10.0 },
+    { name: '2 The wiring',    role: 'journey', t0: 10.0, t1: 22.5 },
+    { name: '3 Night, quiet',  role: 'silence', t0: 22.5, t1: 25.0 },
+    { name: '4 The payoff',    role: 'gift',    t0: 25.0, t1: 40.0 },
+    { name: '5 Goodbye',       role: 'goodbye', t0: 40.0, t1: 45.0 },
+  ],
+  board: [
+    { t: 3.0,  title: 'receipts pile up', sound: 'low drone, tick', next: 'cut to his face' },
+    { t: 8.0,  title: 'exhausted at 2 AM', sound: 'clock tick, then nothing', next: 'cut: the academy' },
+    { t: 11.5, title: 'SkillBridge', sound: 'music lifts', next: 'the wiring' },
+    { t: 15.0, title: 'n8n connects it', sound: 'a blip per node', next: 'the 2 AM order' },
+    { t: 20.5, title: 'order logged', sound: 'blip per row', next: 'the link' },
+    { t: 24.0, title: 'he sleeps', sound: 'near silence', next: 'the payoff' },
+    { t: 28.0, title: '3 hours back', sound: 'the loudest hit', next: 'other vendors' },
+    { t: 36.0, title: 'N80,000 per setup', sound: 'rising arpeggio', next: 'goodbye' },
+    { t: 42.0, title: 'SkillBridge', sound: 'resolve', next: 'loop' },
+  ],
+  narration: [],
+};
+window.TIMELINE = TIMELINE;
